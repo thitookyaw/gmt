@@ -46,20 +46,12 @@ cmake_minimum_required (VERSION 2.8.5)
 # Use NEW behavior with newer CMake releases
 foreach(p
 		CMP0025 # CMake 3.0: Compiler id for Apple Clang is now AppleClang
+		CMP0026 # CMake 3.0: Disallow use of the LOCATION target property
 		CMP0058 # CMake 3.3: Ninja requires custom command byproducts to be explicit
 		CMP0074	# CMake 3.12: find_package uses PackageName_ROOT variables
 		)
 	if(POLICY ${p})
 		cmake_policy(SET ${p} NEW)
-	endif()
-endforeach()
-
-# Use OLD behavior with newer CMake releases
-foreach(p
-		CMP0026 # CMake 3.0: Disallow use of the LOCATION target property
-		)
-	if(POLICY ${p})
-		cmake_policy(SET ${p} OLD)
 	endif()
 endforeach()
 
@@ -146,17 +138,8 @@ if (GIT_FOUND AND HAVE_GIT_VERSION)
 	endif (GNUTAR AND GZIP AND XZ)
 endif (GIT_FOUND AND HAVE_GIT_VERSION)
 
-get_target_property (_location gmtlib LOCATION)
-get_filename_component (GMT_CORE_LIB_NAME ${_location} NAME)
-
-get_target_property (_location pslib LOCATION)
-get_filename_component (PSL_LIB_NAME ${_location} NAME)
-
 if (BUILD_SUPPLEMENTS)
-	# Get name of shared supplemental library
-	get_target_property (_location supplib LOCATION)
-	get_filename_component (GMT_SUPPL_LIB_NAME ${_location} NAME)
-	set (SUPPL "yes [${GMT_SUPPL_LIB_NAME}]")
+	set (SUPPL "yes")
 else (BUILD_SUPPLEMENTS)
 	set (SUPPL "no")
 endif (BUILD_SUPPLEMENTS)
@@ -208,8 +191,8 @@ message(
 	"*  GLIB GTHREAD support       : ${GMT_CONFIG_GTHREAD_MESSAGE}\n"
 	"*  PTHREAD support            : ${GMT_CONFIG_PTHREAD_MESSAGE}\n"
 	"*  Build mode                 : ${BUILD_MODE}\n"
-	"*  Build GMT core             : always [${GMT_CORE_LIB_NAME}]\n"
-	"*  Build PSL library          : always [${PSL_LIB_NAME}]\n"
+	"*  Build GMT core             : always \n"
+	"*  Build PSL library          : always \n"
 	"*  Build GMT supplements      : ${SUPPL}\n"
 	"*  Build GMT for developers   : ${DEVEL}\n"
 	"*  Build proto supplements    : ${PROTO}\n"
