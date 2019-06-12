@@ -216,8 +216,6 @@
 #set (DO_EXAMPLES TRUE)
 #set (DO_TESTS TRUE)
 #set (DO_ANIMATIONS TRUE)
-# Auto-convert classic scripts to modern during testing:
-#set (MODERNIZE_TESTS TRUE)
 # Number of parallel test jobs with "make check":
 #set (N_TEST_JOBS 4)
 
@@ -308,5 +306,3 @@ endif (HAVE_OPENMP)
 #if(MSVC11)
 #  add_definitions(/D_ALLOW_KEYWORD_MACROS)
 #endif(MSVC11)
-
-# vim: textwidth=78 noexpandtab tabstop=2 softtabstop=2 shiftwidth=2

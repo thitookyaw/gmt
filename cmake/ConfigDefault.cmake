@@ -142,11 +142,8 @@ endif (NOT DEFINED GMT_DATA_URL)
 #
 if (NOT DEFINED CMAKE_CONFIGURATION_TYPES)
 	if (NOT DEFINED CMAKE_BUILD_TYPE)
-		# Should we set build type to RelWithDebInfo for developers and
-		# to release for general public (ie when GPLATES_SOURCE_RELEASE is true) ?
-		# Currently it's Release for both.
 		set (CMAKE_BUILD_TYPE Release CACHE STRING
-		"Choose the type of build, options are: None Debug Release RelWithDebInfo MinSizeRel ${extra_build_configurations}."
+		"Choose the type of build, options are: None Debug Release RelWithDebInfo MinSizeRel."
 		FORCE)
 	endif (NOT DEFINED CMAKE_BUILD_TYPE)
 endif (NOT DEFINED CMAKE_CONFIGURATION_TYPES)
@@ -186,5 +183,3 @@ set (CMAKE_FIND_FRAMEWORK LAST)
 if (NOT DEFINED BUILD_DEVELOPER)
 	set (BUILD_DEVELOPER true)
 endif (NOT DEFINED BUILD_DEVELOPER)
-
-# vim: textwidth=78 noexpandtab tabstop=2 softtabstop=2 shiftwidth=2
