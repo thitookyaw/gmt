@@ -12,6 +12,32 @@ trigger:
 
 jobs:
 
+# Linux - Compile only
+########################################################################################
+- job:
+  displayName: 'Linux | Compile only'
+  condition: ne(variables['Build.Reason'], 'Schedule')
+
+  pool:
+    vmImage: 'ubuntu-16.04'
+
+  variables:
+    BUILD_DOCS: false
+    PACKAGE: false
+    TEST: false
+
+  steps:
+
+  # Setup and compile GMT
+  - template: ci/azure-pipelines-linux.yml
+
+  - bash: |
+      set -x -e
+      gmt defaults -Vd
+      gmt pscoast -R0/10/0/10 -JM6i -Ba -Ggray -P -Vd > test.ps
+      gmt begin && gmt coast -R0/10/0/10 -JM6i -Ba -Ggray -Vd && gmt end
+    displayName: Check a few simple commands
+
 # Mac - Compile only
 ########################################################################################
 - job:
