@@ -17,7 +17,7 @@ jobs:
 ########################################################################################
 - job:
   displayName: 'Mac | Compile only'
-  condition: ne(variables['Build.Reason'], 'Schedule')
+  #condition: ne(variables['Build.Reason'], 'Schedule')
 
   pool:
     vmImage: 'macOS-10.14'
@@ -34,7 +34,7 @@ jobs:
 ########################################################################################
 - job:
   displayName: 'Mac | Build docs + Package'
-  condition: eq(variables['Build.Reason'], 'Schedule')
+  #condition: eq(variables['Build.Reason'], 'Schedule')
 
   pool:
     vmImage: 'macOS-10.14'
@@ -51,7 +51,7 @@ jobs:
 ########################################################################################
 - job:
   displayName: 'Mac | Test'
-  condition: eq(variables['Build.Reason'], 'Schedule')
+  #condition: eq(variables['Build.Reason'], 'Schedule')
 
   pool:
     vmImage: 'macOS-10.14'
@@ -68,7 +68,7 @@ jobs:
 ########################################################################################
 - job:
   displayName: 'Windows | Compile + Build Docs + Package'
-  condition: eq(variables['Build.Reason'], 'Schedule')
+  #condition: eq(variables['Build.Reason'], 'Schedule')
   timeoutInMinutes: 120
 
   pool:
@@ -86,7 +86,7 @@ jobs:
 ########################################################################################
 - job:
   displayName: 'Windows | Test'
-  condition: eq(variables['Build.Reason'], 'Schedule')
+  #condition: eq(variables['Build.Reason'], 'Schedule')
   timeoutInMinutes: 360
 
   pool:
