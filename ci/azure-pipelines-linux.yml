@@ -18,7 +18,7 @@ steps:
 
 - bash: |
     set -x -e
-    pip3 install sphinx
+    pip3 install sphinx -v
   displayName: Install dependencies for building documentation
   condition: eq(variables['BUILD_DOCS'], true)
 
