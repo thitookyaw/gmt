@@ -36,17 +36,6 @@ echo "Using the following cmake configuration:"
 cat cmake/ConfigUser.cmake
 echo ""
 
-mkdir -p build && cd build
-
-# Configure
-cmake ${EXTRA_CMAKE_OPTS} -G Ninja ..
-
-# Show CMakeCache.txt, strip comments
-grep -Ev "^(//|$)" CMakeCache.txt
-
-# Build and install
-cmake --build .
-cmake --build . --target install
 
 # Turn off exit on failure.
 set +e
