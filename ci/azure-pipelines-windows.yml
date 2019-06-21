@@ -53,18 +53,6 @@ steps:
 - bash: ci/config-gmt-windows.sh
   displayName: Configure GMT
 
-# Set HOME to avoid permission issue of azure-pipelines
-- bash: echo "##vso[task.setvariable variable=HOME]D:/a/1/s/"
-  displayName: Set HOME
-
-- script: |
-    set -x -e
-    gmt --version
-    gmt defaults -Vd
-    gmt pscoast -R0/10/0/10 -JM6i -Ba -Ggray -P -Vd > test.ps
-    gmt begin && gmt coast -R0/10/0/10 -JM6i -Ba -Ggray -Vd && gmt end
-  displayName: Check a few simple commands
-
 # Azure Pipelines cannot find Visual Studio correctly if Ninja is used.
 # Here, we need
 # 1. call the vcvars64.bat script
@@ -77,6 +65,18 @@ steps:
     cmake --build .
     cmake --build . --target install
   displayName: Compile GMT
+
+# Set HOME to avoid permission issue of azure-pipelines
+- bash: echo "##vso[task.setvariable variable=HOME]D:/a/1/s/"
+  displayName: Set HOME
+
+- script: |
+    set -x -e
+    gmt --version
+    gmt defaults -Vd
+    gmt pscoast -R0/10/0/10 -JM6i -Ba -Ggray -P -Vd > test.ps
+    gmt begin && gmt coast -R0/10/0/10 -JM6i -Ba -Ggray -Vd && gmt end
+  displayName: Check a few simple commands
 
 - bash: |
     set -x -e
