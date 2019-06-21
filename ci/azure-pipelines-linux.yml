@@ -18,8 +18,8 @@ steps:
 
 - bash: |
     set -x -e
-    pip3 install sphinx -v
-    sudo apt-get install
+    pip3 install sphinx
+    echo "##vso[task.prependpath]$HOME/.local/bin"
   displayName: Install dependencies for building documentation
   condition: eq(variables['BUILD_DOCS'], true)
 
