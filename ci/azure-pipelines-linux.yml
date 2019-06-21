@@ -40,17 +40,7 @@ steps:
 - bash: ci/download-coastlines.sh
   displayName: Download coastlines
 
-- bash: ci/config-gmt.sh
-  displayName: Configure GMT
-
-- bash: |
-    mkdir -p build && cd build
-    cmake .. -G Ninja
-    # Show CMakeCache.txt, strip comments
-    grep -Ev "^(//|$)" CMakeCache.txt
-    # Build and install
-    cmake --build .
-    cmake --build . --target install
+- bash: ci/build-gmt.sh
   displayName: Compile GMT
 
 - bash: |
