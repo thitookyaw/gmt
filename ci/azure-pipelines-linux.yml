@@ -12,13 +12,14 @@ steps:
 
 - bash: |
     set -x -e
-    sudo apt-get install graphicsmagick
+    sudo apt-get install graphicsmagick gdal-bin
   displayName: Install dependencies for runing tests
   condition: eq(variables['TEST'], true)
 
 - bash: |
     set -x -e
     pip3 install sphinx -v
+    sudo apt-get install
   displayName: Install dependencies for building documentation
   condition: eq(variables['BUILD_DOCS'], true)
 
