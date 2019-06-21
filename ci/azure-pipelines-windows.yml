@@ -50,7 +50,7 @@ steps:
 - bash: ci/download-coastlines.sh
   displayName: Download coastlines
 
-- bash: ci/build-gmt-windows.sh
+- bash: ci/config-gmt-windows.sh
   displayName: Configure GMT
 
 # Azure Pipelines cannot find Visual Studio correctly if Ninja is used.
