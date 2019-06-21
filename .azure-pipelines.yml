@@ -27,16 +27,41 @@ jobs:
     TEST: false
 
   steps:
-
-  # Setup and compile GMT
   - template: ci/azure-pipelines-linux.yml
 
-  - bash: |
-      set -x -e
-      gmt defaults -Vd
-      gmt pscoast -R0/10/0/10 -JM6i -Ba -Ggray -P -Vd > test.ps
-      gmt begin && gmt coast -R0/10/0/10 -JM6i -Ba -Ggray -Vd && gmt end
-    displayName: Check a few simple commands
+# Linux - Build docs + Package
+########################################################################################
+- job:
+  displayName: 'Linux | Build docs + Package'
+  condition: ne(variables['Build.Reason'], 'Schedule')
+
+  pool:
+    vmImage: 'ubuntu-16.04'
+
+  variables:
+    BUILD_DOCS: true
+    PACKAGE: true
+    TEST: false
+
+  steps:
+  - template: ci/azure-pipelines-linux.yml
+
+# Linux - Test
+########################################################################################
+- job:
+  displayName: 'Linux | Test'
+  condition: ne(variables['Build.Reason'], 'Schedule')
+
+  pool:
+    vmImage: 'ubuntu-16.04'
+
+  variables:
+    BUILD_DOCS: false
+    PACKAGE: false
+    TEST: true
+
+  steps:
+  - template: ci/azure-pipelines-linux.yml
 
 # Mac - Compile only
 ########################################################################################
