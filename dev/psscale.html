@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-    <title>psscale &#8212; GMT 6.0.0_6a82a05_2019.05.28 documentation</title>
+    <title>psscale &#8212; GMT 6.0.0_e241d77_2019.06.26 documentation</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
 
@@ -39,9 +39,9 @@
         <li class="right" >
           <a href="pscoast.html" title="pscoast"
              accesskey="P">previous</a> </li>
-  <li><a href="/projects/gmt/wiki/Documentation">Project Home</a>  &#187;</li>
+  <li><a href="https://www.generic-mapping-tools.org/">Project Home</a>  &#187;</li>
   
-        <li class="nav-item nav-item-0"><a href="index.html">GMT 6.0.0_6a82a05_2019.05.28 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">GMT 6.0.0_e241d77_2019.06.26 documentation</a> &#187;</li>
 
           <li class="nav-item nav-item-1"><a href="PS_classic.html" accesskey="U">Classic Mode Mapping</a> &#187;</li>
 <li class="right">
@@ -76,7 +76,6 @@
 [ <a class="reference internal" href="#g"><span> <strong>-G</strong></span></a></strong><em>zlo</em>/<em>zhi</em> ]
 [ <a class="reference internal" href="#i"><span> <strong>-I</strong></span></a></strong>[<em>max_intens</em>|<em>low_i</em>/<em>high_i</em>] ]
 [ <a class="reference internal" href="#j"><span> <strong>-J</strong></span></a></strong><em>parameters</em> ]
-[ <a class="reference internal" href="#j"><span> <strong>-J</strong></span></a></strong><strong>z</strong>|<strong>Z</strong><em>parameters</em> ]
 [ <a class="reference internal" href="#k"><span> <strong>-K</strong></span></a></strong> ]
 [ <a class="reference internal" href="#l"><span> <strong>-L</strong></span></a></strong>[<strong>i</strong>][<em>gap</em>] ]
 [ <a class="reference internal" href="#m"><span> <strong>-M</strong></span></a></strong> ]
@@ -168,8 +167,9 @@ flags in the CPT). To specify custom text annotations for
 intervals, you must append ;<em>annotation</em> to each z-slice in the CPT.</dd>
 </dl>
 <dl class="docutils" id="c">
-<dt><strong>-C</strong><em>cpt</em></dt>
-<dd><em>cpt</em> is the CPT to be used. By default all
+<dt><strong>-C</strong>[<em>cpt</em>]</dt>
+<dd><em>cpt</em> is the CPT to be used. If no <em>cpt</em> is appended then we use the
+current CPT.  If no <strong>-C</strong> is given the we read stdin.  By default all
 color changes are annotated. To use a subset, add an extra column to
 the CPT with a L, U, or B to annotate Lower, Upper, or Both
 color segment boundaries (but see <strong>-B</strong>). If not given, the module
@@ -216,10 +216,6 @@ asymmetric range [Default is no illumination].</dd>
 <dl class="docutils" id="j">
 <dt><strong>-J</strong><em>parameters</em> <a class="reference internal" href="gmt.html#j-full"><span class="std std-ref">(more …)</span></a></dt>
 <dd>Select map projection.  </dd>
-</dl>
-<dl class="docutils">
-<dt><strong>-Jz</strong>|<strong>Z</strong><em>parameters</em> <a class="reference internal" href="gmt.html#jz-full"><span class="std std-ref">(more …)</span></a></dt>
-<dd>Set z-axis scaling; same syntax as <strong>-Jx</strong>.</dd>
 </dl>
 <dl class="docutils" id="l">
 <dt><strong>-L</strong>[<strong>i</strong>][<em>gap</em>]</dt>
@@ -450,9 +446,9 @@ symbol at the left, unless <strong>+n</strong> was used in which case we center 
         <li class="right" >
           <a href="pscoast.html" title="pscoast"
              >previous</a> </li>
-  <li><a href="/projects/gmt/wiki/Documentation">Project Home</a>  &#187;</li>
+  <li><a href="https://www.generic-mapping-tools.org/">Project Home</a>  &#187;</li>
   
-        <li class="nav-item nav-item-0"><a href="index.html">GMT 6.0.0_6a82a05_2019.05.28 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">GMT 6.0.0_e241d77_2019.06.26 documentation</a> &#187;</li>
 
           <li class="nav-item nav-item-1"><a href="PS_classic.html" >Classic Mode Mapping</a> &#187;</li>
 <li class="right">
@@ -470,8 +466,8 @@ symbol at the left, unless <strong>+n</strong> was used in which case we center 
       </ul>
     </div>
 <div class="footer">
-    &copy; Copyright 2019, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe.
-  Last updated on May 29, 2019.
+    &copy; Copyright 2019, The GMT Team.
+  Last updated on Jun 27, 2019.
   Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.8.5.
   <br />Theme based on <a href="http://readthedocs.org/">Read The Docs</a>
 

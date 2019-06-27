@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-    <title>gmt &#8212; GMT 6.0.0_6a82a05_2019.05.28 documentation</title>
+    <title>gmt &#8212; GMT 6.0.0_e241d77_2019.06.26 documentation</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
 
@@ -39,9 +39,9 @@
         <li class="right" >
           <a href="gmtget.html" title="get"
              accesskey="P">previous</a> </li>
-  <li><a href="/projects/gmt/wiki/Documentation">Project Home</a>  &#187;</li>
+  <li><a href="https://www.generic-mapping-tools.org/">Project Home</a>  &#187;</li>
   
-        <li class="nav-item nav-item-0"><a href="index.html">GMT 6.0.0_6a82a05_2019.05.28 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">GMT 6.0.0_e241d77_2019.06.26 documentation</a> &#187;</li>
 
           <li class="nav-item nav-item-1"><a href="G.html" accesskey="U">G</a> &#187;</li>
 <li class="right">
@@ -92,8 +92,7 @@ file in the current directory), <strong>cache</strong> (deletes the user’s cac
 and all of its content), or <strong>all</strong> (does all of the above).</p>
 <p><strong>gmt begin</strong> [<em>session-prefix</em>] [<em>format</em>]</p>
 <p>Initializes a new GMT session under <em>modern</em> mode [Default is <em>classic</em> mode].
-This is experimental; see <a class="reference external" href="http://gmt.soest.hawaii.edu/projects/gmt/wiki/Modernization">http://gmt.soest.hawaii.edu/projects/gmt/wiki/Modernization</a>
-for the current description.  All work is performed in a temporary work directory.
+All work is performed in a temporary work directory.
 The optional <em>session-prefix</em> assigns a name to the session, and this may be used
 as figure name for single-figure sessions [gmtsession].  Likewise, the optional
 <em>format</em> can be used to override the default graphics format [PDF].</p>
@@ -379,6 +378,18 @@ each program can be found in the separate manual pages.</p>
 <td>&#160;</td>
 </tr>
 <tr class="row-even"><td>&#160;</td>
+<td>Supplement <em>geodesy</em>:</td>
+</tr>
+<tr class="row-odd"><td><strong>velo</strong></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><strong>earthtide</strong></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><strong>gpsgridder</strong></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
 <td>Supplement <em>gshhg</em>:</td>
 </tr>
 <tr class="row-odd"><td><strong>gshhg</strong></td>
@@ -388,24 +399,6 @@ each program can be found in the separate manual pages.</p>
 <td>Supplement <em>img</em>:</td>
 </tr>
 <tr class="row-odd"><td><strong>img2grd</strong></td>
-<td>&#160;</td>
-</tr>
-<tr class="row-even"><td>&#160;</td>
-<td>Supplement <em>meca</em>:</td>
-</tr>
-<tr class="row-odd"><td><strong>coupe</strong></td>
-<td>&#160;</td>
-</tr>
-<tr class="row-even"><td><strong>meca</strong></td>
-<td>&#160;</td>
-</tr>
-<tr class="row-odd"><td><strong>polar</strong></td>
-<td>&#160;</td>
-</tr>
-<tr class="row-even"><td><strong>velo</strong></td>
-<td>&#160;</td>
-</tr>
-<tr class="row-odd"><td><strong>sac</strong></td>
 <td>&#160;</td>
 </tr>
 <tr class="row-even"><td>&#160;</td>
@@ -447,40 +440,52 @@ each program can be found in the separate manual pages.</p>
 <tr class="row-even"><td><strong>flexure</strong></td>
 <td>&#160;</td>
 </tr>
-<tr class="row-odd"><td><strong>gpsgridder</strong></td>
+<tr class="row-odd"><td><strong>gravfft</strong></td>
 <td>&#160;</td>
 </tr>
-<tr class="row-even"><td><strong>gravfft</strong></td>
+<tr class="row-even"><td><strong>grdflexure</strong></td>
 <td>&#160;</td>
 </tr>
-<tr class="row-odd"><td><strong>grdflexure</strong></td>
+<tr class="row-odd"><td><strong>grdgravmag3d</strong></td>
 <td>&#160;</td>
 </tr>
-<tr class="row-even"><td><strong>grdgravmag3d</strong></td>
+<tr class="row-even"><td><strong>grdredpol</strong></td>
 <td>&#160;</td>
 </tr>
-<tr class="row-odd"><td><strong>grdredpol</strong></td>
+<tr class="row-odd"><td><strong>grdseamount</strong></td>
 <td>&#160;</td>
 </tr>
-<tr class="row-even"><td><strong>grdseamount</strong></td>
+<tr class="row-even"><td><strong>talwani2d</strong></td>
 <td>&#160;</td>
 </tr>
-<tr class="row-odd"><td><strong>talwani2d</strong></td>
+<tr class="row-odd"><td><strong>talwani3d</strong></td>
 <td>&#160;</td>
 </tr>
-<tr class="row-even"><td><strong>talwani3d</strong></td>
-<td>&#160;</td>
-</tr>
-<tr class="row-odd"><td>&#160;</td>
+<tr class="row-even"><td>&#160;</td>
 <td>Supplement <em>segy</em>:</td>
 </tr>
-<tr class="row-even"><td><strong>segy</strong></td>
+<tr class="row-odd"><td><strong>segy</strong></td>
 <td>&#160;</td>
 </tr>
-<tr class="row-odd"><td><strong>segyz</strong></td>
+<tr class="row-even"><td><strong>segyz</strong></td>
 <td>&#160;</td>
 </tr>
-<tr class="row-even"><td><strong>segy2grd</strong></td>
+<tr class="row-odd"><td><strong>segy2grd</strong></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td>Supplement <em>seis</em>:</td>
+</tr>
+<tr class="row-odd"><td><strong>coupe</strong></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><strong>meca</strong></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><strong>polar</strong></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><strong>sac</strong></td>
 <td>&#160;</td>
 </tr>
 <tr class="row-odd"><td>&#160;</td>
@@ -1445,11 +1450,11 @@ z-level all 2D material, like the plot frame, is plotted (in
 perspective). [Default is at the bottom of the z-axis]. Use <strong>-px</strong>
 or <strong>-py</strong> to plot against the “wall” x = level or y = level
 (default is on the horizontal plane, which is the same as using
-<strong>-pz</strong>). For frames used for animation, you may want to append
-<strong>+</strong> to fix the center of your data domain (or specify a particular
-world coordinate point with <strong>+w</strong><em>lon0</em>/<em>lat</em>[/<em>z</em>]) which will
-project to the center of your page size (or specify the coordinates
-of the projected view point with <strong>+v</strong><em>x0</em>/<em>y0</em>. When <strong>-p</strong> is
+<strong>-pz</strong>). For frames used for animation, note we fix the center of your
+data domain.  Specify another center using a particular
+world coordinate point with <strong>+w</strong><em>lon0</em>/<em>lat0</em>[/<em>z0</em>]) which will
+project to the center of your page size, or specify the coordinates
+of the projected 2-D view point with <strong>+v</strong><em>x0</em>/<em>y0</em>. When <strong>-p</strong> is
 used without any further arguments, the values from the last use of
 <strong>-p</strong> in a previous GMT command will be used.  Alternatively, you
 can perform a simple rotation about the z-axis by just giving the
@@ -1693,7 +1698,7 @@ command line].</dd>
 directories. For an explanation of the various GMT settings in this
 man page (like <a class="reference internal" href="gmt.conf.html#format-float-out"><span class="std std-ref">FORMAT_FLOAT_OUT</span></a>), see the man page of the GMT
 configuration file <a class="reference internal" href="gmt.conf.html"><span class="doc">gmt.conf</span></a>. Information is also available on the
-GMT home page <a class="reference external" href="http://gmt.soest.hawaii.edu/">http://gmt.soest.hawaii.edu/</a></p>
+GMT documentation site <a class="reference external" href="https://docs.generic-mapping-tools.org/">https://docs.generic-mapping-tools.org/</a></p>
 </div>
 </div>
 
@@ -1756,9 +1761,9 @@ GMT home page <a class="reference external" href="http://gmt.soest.hawaii.edu/">
         <li class="right" >
           <a href="gmtget.html" title="get"
              >previous</a> </li>
-  <li><a href="/projects/gmt/wiki/Documentation">Project Home</a>  &#187;</li>
+  <li><a href="https://www.generic-mapping-tools.org/">Project Home</a>  &#187;</li>
   
-        <li class="nav-item nav-item-0"><a href="index.html">GMT 6.0.0_6a82a05_2019.05.28 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">GMT 6.0.0_e241d77_2019.06.26 documentation</a> &#187;</li>
 
           <li class="nav-item nav-item-1"><a href="G.html" >G</a> &#187;</li>
 <li class="right">
@@ -1776,8 +1781,8 @@ GMT home page <a class="reference external" href="http://gmt.soest.hawaii.edu/">
       </ul>
     </div>
 <div class="footer">
-    &copy; Copyright 2019, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe.
-  Last updated on May 29, 2019.
+    &copy; Copyright 2019, The GMT Team.
+  Last updated on Jun 27, 2019.
   Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.8.5.
   <br />Theme based on <a href="http://readthedocs.org/">Read The Docs</a>
 

@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-    <title>(3) Spectral estimation and xy-plots &#8212; GMT 6.0.0_6a82a05_2019.05.28 documentation</title>
+    <title>(3) Spectral estimation and xy-plots &#8212; GMT 6.0.0_e241d77_2019.06.26 documentation</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
 
@@ -39,9 +39,9 @@
         <li class="right" >
           <a href="ex02.html" title="(2) Image presentations"
              accesskey="P">previous</a> </li>
-  <li><a href="/projects/gmt/wiki/Documentation">Project Home</a>  &#187;</li>
+  <li><a href="https://www.generic-mapping-tools.org/">Project Home</a>  &#187;</li>
   
-        <li class="nav-item nav-item-0"><a href="../index.html">GMT 6.0.0_6a82a05_2019.05.28 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">GMT 6.0.0_e241d77_2019.06.26 documentation</a> &#187;</li>
 
           <li class="nav-item nav-item-1"><a href="../Gallery.html" accesskey="U">The GMT historical collection</a> &#187;</li>
 <li class="right">
@@ -177,13 +177,13 @@ gmt math -T<span class="nv">$bounds</span>/1 -N1/0 <span class="nv">T</span> <sp
 <span class="c1">#</span>
 <span class="c1"># Now we can resample the gmt projected satellite data:</span>
 <span class="c1">#</span>
-gmt sample1d sat.pg -Nsamp.x &gt; samp_sat.pg
+gmt sample1d sat.pg -Tsamp.x &gt; samp_sat.pg
 <span class="c1">#</span>
 <span class="c1"># For reasons above, we use gmt filter1d to pre-treat the ship data.  We also need to sample</span>
 <span class="c1"># it because of the gaps &gt; 1 km we found.  So we use gmt filter1d | gmt sample1d.  We also</span>
 <span class="c1"># use the -E on gmt filter1d to use the data all the way out to bounds :</span>
 <span class="c1">#</span>
-gmt filter1d ship.pg -Fm1 -T<span class="nv">$bounds</span>/1 -E <span class="p">|</span> gmt sample1d -Nsamp.x &gt; samp_ship.pg
+gmt filter1d ship.pg -Fm1 -T<span class="nv">$bounds</span>/1 -E <span class="p">|</span> gmt sample1d -Tsamp.x &gt; samp_ship.pg
 <span class="c1">#</span>
 <span class="c1"># Now we plot them again to see if we have done the right thing:</span>
 <span class="c1">#</span>
@@ -236,9 +236,9 @@ gmt psxy <span class="nv">$R</span> -JX8i/1.1i -O -Y4.25i -Bxf100 -Bya0.5f0.1+l<
 <span class="c1"># and this time we also use gmt trend1d to return the residual from the model fit (the </span>
 <span class="c1"># de-trended data):</span>
 gmt trend1d -Fxrw -Np1+r samp_ship.pg <span class="p">|</span> gmt <span class="k">select</span> -Z0/0.6 -o0,1 -Iz <span class="se">\</span>
-	<span class="p">|</span> gmt sample1d -Nsamp.x &gt; samp2_ship.pg
+	<span class="p">|</span> gmt sample1d -Tsamp.x &gt; samp2_ship.pg
 gmt trend1d -Fxrw -Np1+r samp_sat.pg  <span class="p">|</span> gmt <span class="k">select</span> -Z0/0.6 -o0,1 -Iz <span class="se">\</span>
-	<span class="p">|</span> gmt sample1d -Nsamp.x &gt; samp2_sat.pg
+	<span class="p">|</span> gmt sample1d -Tsamp.x &gt; samp2_sat.pg
 <span class="c1">#</span>
 <span class="c1"># We plot these to see how they look:</span>
 <span class="c1">#</span>
@@ -319,9 +319,9 @@ improves dramatically for wavelengths &gt; 20 km.</p>
         <li class="right" >
           <a href="ex02.html" title="(2) Image presentations"
              >previous</a> </li>
-  <li><a href="/projects/gmt/wiki/Documentation">Project Home</a>  &#187;</li>
+  <li><a href="https://www.generic-mapping-tools.org/">Project Home</a>  &#187;</li>
   
-        <li class="nav-item nav-item-0"><a href="../index.html">GMT 6.0.0_6a82a05_2019.05.28 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">GMT 6.0.0_e241d77_2019.06.26 documentation</a> &#187;</li>
 
           <li class="nav-item nav-item-1"><a href="../Gallery.html" >The GMT historical collection</a> &#187;</li>
 <li class="right">
@@ -339,8 +339,8 @@ improves dramatically for wavelengths &gt; 20 km.</p>
       </ul>
     </div>
 <div class="footer">
-    &copy; Copyright 2019, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe.
-  Last updated on May 29, 2019.
+    &copy; Copyright 2019, The GMT Team.
+  Last updated on Jun 27, 2019.
   Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.8.5.
   <br />Theme based on <a href="http://readthedocs.org/">Read The Docs</a>
 
